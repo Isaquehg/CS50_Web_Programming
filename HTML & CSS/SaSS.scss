@@ -1,0 +1,27 @@
+$color: red;
+%message{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+}
+.messages{
+    @extend %message;
+}
+
+#title{
+    font-size: 25px;
+    color: $color;
+}
+#subtitle{
+    font-size: 20px;
+    color: $color;
+}
+div{
+    font-size: 20px;
+    p{
+        color: blue;
+    }
+    h3{
+        color: green;
+    }
+}

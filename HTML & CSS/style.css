@@ -1,3 +1,14 @@
+@media (min-width: 600px){
+    body{
+        background-color: whitesmoke;
+    }
+}
+@media (max-width: 599px) {
+    body{
+        background-color: red;
+    }
+}
+
 h1{
     color:blue;
     text-align: center;
@@ -16,13 +27,61 @@ table{
 }
 td, th{
     border: 2px solid black;
+    padding: 3px;
 }
 #lorem{
-    font-weight: 400;
     background-color: blue;
+    font-weight: 400;
     font-size: 20px;
-    width: 300px;
+    text-align: center;
+    width: 750px;
     height: min-content;
-    padding: 10px;
+    padding: 15px;
     border: 2px solid black;
+}
+.subtitles{
+    color: black;
+    font-weight: 500;
+    font-size: 50px;
+    text-align: left;
+}
+ul > li{
+    color: blue;
+}
+button{
+    color: white;
+    background-color: blue;
+    width: 120px;
+    height: min-content;
+    font-size: 25px;
+    border: solid red;
+}
+button:hover{
+    background-color: white;
+    border: solid red;
+    border-width: 2px;
+    color: blue;
+}
+#containers{
+    display: flex;
+    flex-wrap: wrap;
+}
+#containers > div{
+    font-size: 20px;
+    padding: 15px;
+    margin: 15px;
+    width: 200px;
+}
+#grid{
+    background-color: blue;
+    display: grid;
+    padding: 15px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: 200px 200px auto;
+}
+.grid_item{
+    background-color: whitesmoke;
+    font-size: 20px;
+    padding: 15px;
 }
