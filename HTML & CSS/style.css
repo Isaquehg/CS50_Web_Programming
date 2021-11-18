@@ -7,10 +7,14 @@ h1{
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
-#country_table{
+table{
     background-color: blue;
     padding: 5px;
     margin-left: 20px;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+td, th{
     border: 2px solid black;
 }
 #lorem{
