@@ -1,0 +1,22 @@
+git clone <url>: To clone a repository
+
+ls = list all files in a directory
+
+git add filename.extension: To start tracking the file
+
+git commit -m "descripion": To commit the changes
+
+git status: it shows the currently repository status
+
+git push: To push the files to servers
+
+BASIC GIT
+STEPS:
+1-create a new repository from github.com
+2-clone this empty repository using GIT CLONE <URL>
+3-cd directory in the CMD to the cloned repository
+4-ls to see all the files in the repo folder
+5-create a new file using TOUCH FILE.EXTENSION
+6-add this file to git using GIT ADD FILENAME.EXTENSION
+7-check the status before pushing using GIT status
+8-push all the changes to the currently branch using GIT PUSH
