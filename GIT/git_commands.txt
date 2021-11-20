@@ -1,15 +1,32 @@
+COMMANDS(IN GITBASH):
 git clone <url>: To clone a repository
 
 ls = list all files in a directory
+cd .. = change to currently directory
+code . = open editor of the currently directory
+
+git status: it shows the currently repository status
 
 git add filename.extension: To start tracking the file
 
 git commit -m "descripion": To commit the changes
 git commit -am "descripion": To add AND commit all files
 
-git status: it shows the currently repository status
-
 git push: To push the files to servers
+
+git pull: To update your local file from the servers file(if someone else changed it and u want to update yours with this version//opposite to push)
+
+git log: To track all the changes made
+
+git reset --hard <commit hash>: Returns the repository to the specified repository version(through its hash code)
+git reset --hard origin/master: Returns to the github's version of the repository
+
+git branch: It shows your currently branch
+
+git checkout -b branchname: To create a new branch
+git checkout branchname: To switch among branches
+
+git merge branchname: To merge a branch into master, we've got to be in master and use this command
 
 BASIC GIT
 STEPS:
@@ -21,3 +38,23 @@ STEPS:
 6-add this file to git using GIT ADD FILENAME.EXTENSION
 7-check the status before pushing using GIT status
 8-push all the changes to the currently branch using GIT PUSH
+
+GIT CONFLICTS:
+no conflicted code
+<<<<<<<<<
+your local code here
+=========
+the servers code here(the same piece of this)
+>>>>>>>>>
+no conflicted code
+
+BRANCH:
+We can divide the development into branches from the master
+The branch we're working on is the HEAD
+If we want to converge two branches, we use the MERGE feature
+
+FORKS & PULL REQUESTS
+if we're working in a open-source project or your team project, u can fork it on github, make some modifications and make a PULL REQUEST to try improving the source code
+
+GITHUB PAGES
+create a new repository and give its name like this: username.github.io
