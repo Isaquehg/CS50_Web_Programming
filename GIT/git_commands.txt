@@ -5,6 +5,7 @@ ls = list all files in a directory
 git add filename.extension: To start tracking the file
 
 git commit -m "descripion": To commit the changes
+git commit -am "descripion": To add AND commit all files
 
 git status: it shows the currently repository status
 
