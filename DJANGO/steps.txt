@@ -6,9 +6,9 @@ source project_name/Scripts/activate
 
 django-admin startproject project_name
 
-python manage.py runserver
-
 python manage.py startapp app_name
+
+python manage.py runserver
 
 go to the setting.py of the project and add the app_name into the installed apps
 
