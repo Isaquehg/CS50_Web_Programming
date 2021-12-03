@@ -1,0 +1,42 @@
+*creating table:    
+    CREATE TABLE flights (
+    ...>         id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ...>         origin TEXT NOT NULL,
+    ...>         destination TEXT NOT NULL,
+    ...>         duration INTEGER NOT NULL
+    ...> );
+
+*inserting:
+    INSERT INTO flights (origin, destination, duration) VALUES ("New York", London, 415);
+
+*showing table:    
+    SELECT * FROM table_name WHERE duration > 500 AND origin = "New York";
+    SELECT * FROM table_name WHERE origin LIKE "%a%"; (it shows any origin that has A letter)
+
+*creating headers:    
+    .mode columns
+    .headers yes
+
+*delete table
+    DROP TABLE flights;
+
+*functions:
+    AVG
+    MIN
+    MAX
+    etc.
+
+*updates:
+    UPDATE flights
+        SET duration = 432 WHERE origin = "New York";
+
+*deletes
+    DELETE FROM flights WHERE destination = "Tokyo";
+
+*join tables(passengers and flights):
+    SELECT name, origin, destination 
+    FROM flights JOIN passengers 
+    ON passengers.flight_id = flight_id;
+
+*index:
+    CREATE INDEX index_name ON passengers (last_column_name);
