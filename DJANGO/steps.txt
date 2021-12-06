@@ -1,8 +1,15 @@
 pip install django
 pip install virtualenv
 
+(git bash)
 python -m venv project_name
 source project_name/Scripts/activate
+
+(CMD)
+py -3 -m venv venv_name
+cd venv_name
+cd Scripts
+activate.bat
 
 django-admin startproject project_name
 
