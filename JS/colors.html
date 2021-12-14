@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <script>
+        //iterating through all the buttons
+        document.addEventListener('DOMContentLoaded', () => {  //function() is equal to () =>
+            document.querySelectorAll('button').forEach(button => { //function(arg) is equal to arg =>
+                button.onclick = () => {
+                    document.querySelector('#hello').style.color = button.dataset.color;
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1 id="hello">Hello</h1>
+    <button data-color="red">Red</button>
+    <button data-color="blue">Blue</button>
+    <button data-color="green">Green</button>
+</body>
+</html>
