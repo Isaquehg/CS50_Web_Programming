@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @keyframes grow_n_move{
+            0%{
+                font-size: 20px;
+                left: 0%;
+                opacity: 0;
+            }
+            50%{
+                font-size: 100px;
+                left: 50%;
+                opacity: 0.6;
+            }
+            100%{
+                font-size: 20px;
+                left: 0%;
+                opacity: 1;
+            }
+        }
+        
+        h1{
+            position: relative;
+            animation-name: grow_n_move;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;/*number of times the animation occurs(ex.: 1, 2, 3, infinte)*/
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const h1 = document.querySelector("h1");
+            h1.style.animationPlayState = "paused";
+
+            document.querySelector('button').onclick = () => {
+                if(h1.style.animationPlayState === 'paused'){
+                    h1.style.animationPlayState = 'running';
+                }
+                else{
+                    h1.style.animationPlayState = 'paused';
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <button>Click Here!</button>
+    <h1>Welcome</h1>
+</body>
+</html>
