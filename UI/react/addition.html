@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    
+    <script type="text/babel">
+        
+        function App(){
+
+            //const [num1, setNum1] = React.useState(1);
+            //const [num1, setNum2] = React.useState(2);
+            
+            const [state, setState] = React.useState({
+                num1: 2,
+                num2: 2,
+                response: "",
+                score: 0
+            })
+
+            function updateResponse(event){
+                setState({
+                    ...state,
+                    response: event.target.value
+                })
+            }
+
+            function inputKeyPress(event){
+                if(event.key === "Enter"){
+                    const answer = parseInt(state.response);
+                    if(state.num1 + state.num2 === answer){
+                        setState({
+                            ...state,
+                            score: state.score + 1
+                        })
+                    }
+                    else{
+                        setState({
+                            ...state,
+                            score: state.score - 1
+                        })
+                    }
+                }
+            }
+
+            return (
+                <div>
+                    <div>{state.num1} + {state.num2}</div>
+                    <input onKetPress={inputKeyPress} onChange={updateResponse} value={state.response}/>
+                    <div>Score: {state.score}</div>
+                </div>
+            )
+        }
+        ReactDOM.render(<App />, document.querySelector("#app"));
+    </script>
+</body>
+</html>

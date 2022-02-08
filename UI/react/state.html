@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Props</title>
+    <title>Counter</title>
     <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -13,17 +13,20 @@
     <div id="app"></div>
     
     <script type="text/babel">
-        function Hello(props){
-            return (
-                <h1>Hello, {props.name}!</h1>
-            )
-        }
+        
         function App(){
+
+            //initial value
+            const [count, setCount] = React.useState(0);
+
+            function updateCount() {
+                setCount(count + 1);
+            }
+
             return (
                 <div>
-                    <h1><Hello name="foo"/></h1>
-                    <h1><Hello name="bar"/></h1>
-                    <h1><Hello name="baz"/></h1>
+                    <div>{count}</div>
+                    <button onClick={updateCount}>Count!</button>
                 </div>
             );
         }
