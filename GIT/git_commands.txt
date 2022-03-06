@@ -1,7 +1,7 @@
 COMMANDS(IN GITBASH):
 git clone <url>: To clone a repository
 
-ls = list all files in a directory
+ls/dir = list all files in a directory
 cd .. = change to currently directory
 code . = open editor of the currently directory
 
@@ -27,6 +27,8 @@ git checkout -b branchname: To create a new branch
 git checkout branchname: To switch among branches
 
 git merge branchname: To merge a branch into master, we've got to be in master and use this command
+
+git add -A && git commit -m "commit_description": To add and commit all files in a "single" command
 
 BASIC GIT
 STEPS:
